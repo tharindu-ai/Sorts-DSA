@@ -21,6 +21,70 @@ Bubble Sort is a basic comparison-based sorting algorithm. It works by repeatedl
 3. Swap them if they’re in the wrong order.
 4. Repeat until no swaps are needed.
 
+# ⚡ Quick Sort in Python
+
+This repository contains a simple and clean implementation of the **Quick Sort** algorithm using Python.
+
+Quick Sort is a **divide-and-conquer** sorting algorithm that works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays according to whether they are less than or greater than the pivot.
+
+---
+
+## 📚 Algorithm Explanation
+
+1. Select a pivot element.
+2. Partition the array:
+   - Move all elements less than or equal to the pivot to its left.
+   - Move all elements greater than the pivot to its right.
+3. Recursively apply the above steps to the sub-arrays.
+
+**Time Complexity:**
+- Best Case: O(n log n)
+- Average Case: O(n log n)
+- Worst Case: O(n²)
+
+**Space Complexity:** O(log n) (for recursion stack)
+
+---
+
+## 🖥️ Python Code
+
+```python
+def partition(array, lb, ub):
+    pivot = array[lb]
+    start = lb + 1
+    end = ub
+
+    while True:
+        while start < end and array[start] <= pivot:
+            start += 1
+
+        while start <= end and array[end] > pivot:
+            end -= 1
+
+        if start < end:
+            array[start], array[end] = array[end], array[start]
+        else:
+            break
+
+    array[lb], array[end] = array[end], array[lb]
+    return end
+
+def quickSort(array, start, end):
+    if start >= end:
+        return
+    
+    k = partition(array, start, end)
+    quickSort(array, start, k - 1)
+    quickSort(array, k + 1, end)
+
+# Input from user
+n = int(input("How many elements: "))
+data = [int(input(f"Enter your number {i+1} : ")) for i in range(n)]
+
+print("Before sorting:", data)
+quickSort(data, 0, len(data) - 1)
+print("After sorting:", data)
+
 ## 🖥️ Example in Python
 
 ```python
@@ -40,3 +104,4 @@ def bubble_sort(arr):
 # Example usage
 numbers = [64, 34, 25, 12, 22, 11, 90]
 print("Sorted array:", bubble_sort(numbers))
+
