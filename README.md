@@ -44,6 +44,28 @@ Quick Sort is a **divide-and-conquer** sorting algorithm that works by selecting
 
 **Space Complexity:** O(log n) (for recursion stack)
 
+# Selection Sort in Python 🧮
+
+This is a simple Python script that demonstrates the **Selection Sort** algorithm. It takes user input to build a list of numbers and then sorts them in ascending order using Selection Sort.
+
+## 📌 What is Selection Sort?
+
+Selection Sort is a basic comparison-based sorting algorithm. It divides the input list into two parts: a sorted and an unsorted section. It repeatedly selects the smallest (or largest) element from the unsorted section and moves it to the end of the sorted section.
+
+**Time Complexity:**
+- Worst case: O(n²)
+- Best case: O(n²)
+- Space complexity: O(1)
+
+## 🚀 How to Run
+
+1. Clone this repository or download the `selection_sort.py` file.
+2. Open your terminal or command prompt.
+3. Run the script using Python:
+
+```bash
+python selection_sort.py
+
 ---
 
 ## 🖥️ Python Code
