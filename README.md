@@ -62,11 +62,29 @@ Selection Sort is a basic comparison-based sorting algorithm. It divides the inp
 1. Clone this repository or download the `selection_sort.py` file.
 2. Open your terminal or command prompt.
 3. Run the script using Python:
+# Insertion Sort in Python 🐍
 
-```bash
-python selection_sort.py
+This is a simple Python script that implements the **Insertion Sort** algorithm. The script takes a list of numbers from the user and sorts them in ascending order using insertion sort.
 
----
+## 📌 What is Insertion Sort?
+
+Insertion Sort is a simple sorting algorithm that builds the final sorted array one item at a time. It is much like sorting playing cards in your hands.
+
+- Time Complexity: O(n²) in the worst case
+- Space Complexity: O(1) (in-place sorting)
+- Stable: Yes
+
+## 📄 How It Works
+
+The algorithm works by dividing the list into a "sorted" and "unsorted" section. It repeatedly takes the first unsorted element and inserts it into the correct position in the sorted part.
+
+## 🚀 How to Run
+
+### Prerequisites
+
+- Python 3.x installed
+
+### Run the script
 
 ## 🖥️ Python Code
 
